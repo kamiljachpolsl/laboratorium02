@@ -5,7 +5,31 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    char a;
+    int intLiczba;
+    //std::cout << "Hello World!\n";
+    std::cin >> a;
+    //std::cout << int(a);
+    if (int(a) >= 48 && int(a) <= 57) {
+        intLiczba = (int)a - 48;
+    }
+    else {
+        abort();
+    };
+    
+    int calosc = 10;
+    if (intLiczba % 2 == 0) {
+        std::cout << double(intLiczba) / double(calosc) * 100;
+    }
+    else {
+        std::cout << ++intLiczba;
+    }
+    int c;
+    std::cin >> c;
+    std::cout << c;
+    //std::cin.clear();
+    //std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
