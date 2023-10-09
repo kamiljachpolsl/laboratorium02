@@ -25,7 +25,21 @@ int main()
         std::cout << ++intLiczba;
     }
     int c;
-    std::cin >> c;
+    
+    while (true) {
+        std::cin >> c;
+        if (std::cin) {
+            std::cout << c;
+            break;
+        }
+        else {
+            std::cin.clear();
+            std::cin.ignore(1000, '\n');
+        }
+    }
+    
+    
+    /*std::cin >> c;
     if (std::cin) {
         std::cout << c;
     }
@@ -35,7 +49,7 @@ int main()
         std::cin >> c;
         std::cout << c;
     }
-
+    */
     
 
 }
