@@ -26,9 +26,17 @@ int main()
     }
     int c;
     std::cin >> c;
-    std::cout << c;
-    //std::cin.clear();
-    //std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    if (std::cin) {
+        std::cout << c;
+    }
+    else {
+        std::cin.clear();
+        std::cin.ignore(1000, '\n');
+        std::cin >> c;
+        std::cout << c;
+    }
+
+    
 
 }
 
